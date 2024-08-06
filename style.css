@@ -1,0 +1,13 @@
+
+/* Estilos para animación de eliminar */
+
+@keyframes FadeOut {
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.Hidden {
+    animation: FadeOut .5s forwards;
+}
