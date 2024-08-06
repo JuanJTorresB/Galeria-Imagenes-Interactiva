@@ -1,3 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main__half {
+    width: 100vw;
+    display: flex;
+}
+.main--form {
+    min-height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main--section {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.inputForm{
+    max-height: 30px;
+}
+.button{
+    padding: 8px;
+}
 
 /* Estilos para animación de eliminar */
 
