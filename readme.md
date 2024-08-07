@@ -12,7 +12,7 @@ Requisitos del Proyecto:
 
 Estructura HTML:
 
-Una div principal para contener la galería.
+Un div principal para contener la galería.
 Un campo de entrada input para la URL de la imagen y un input para el título de la imagen.
 Un botón button para añadir la imagen a la galería.
 Un contenedor div para mostrar las imágenes en miniatura.
