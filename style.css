@@ -8,6 +8,7 @@
 .main__half {
     width: 100vw;
     display: flex;
+    flex-wrap: wrap;
 }
 .main--form {
     min-height: 60px;
@@ -16,13 +17,33 @@
 }
 .main--section {
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 .inputForm{
     max-height: 30px;
 }
 .button{
     padding: 8px;
+    border-radius: 8px;
+}
+.fig__img {
+    width: 100% ;
+    max-height: 60%;
+    border-radius: 25px 0px;
+}
+.fig{
+    height: 300px;
+    border-radius: 25px;
+    background-color: rgb(255, 230, 149);
+}
+.fig__info {
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.fig__info__titulo{
+    width: 100%;
 }
 
 /* Estilos para animación de eliminar */
@@ -36,4 +57,35 @@
 
 .Hidden {
     animation: FadeOut .5s forwards;
+}
+
+/* Modales // Vistas Ampliadas */
+
+.modal {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: all .5s;
+}
+
+.modal__img{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.NoVisible {
+    display: none;
+}
+.button--close{
+    color: #ffe96c;
+    font-size: 250px;
+    background: none;
+    border: 0px;
 }
