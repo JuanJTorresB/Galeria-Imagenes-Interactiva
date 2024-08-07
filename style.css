@@ -81,6 +81,7 @@
 }
 
 .NoVisible {
+    opacity: 0;
     display: none;
 }
 .button--close{

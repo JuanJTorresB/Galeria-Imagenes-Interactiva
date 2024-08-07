@@ -35,7 +35,9 @@ const activarBotonesEliminar = ()=>{
 const activarImagenesAmpliar = ()=>{
     for (let botonAmpliar of buttonsAmpliar){
         botonAmpliar.addEventListener("click", ()=>{
-            botonAmpliar.parentElement.parentElement.nextElementSibling.classList.toggle('NoVisible',false);
+            /* botonAmpliar.parentElement.parentElement.nextElementSibling.classList.toggle('NoVisible',false); */ //Otra forma de Mostrar el Pop Up
+            botonAmpliar.parentElement.parentElement.nextElementSibling.style.opacity = "100";
+            botonAmpliar.parentElement.parentElement.nextElementSibling.style.visibility = "visible";
         });
     };
 };
@@ -45,7 +47,9 @@ const activarImagenesAmpliar = ()=>{
 const activarCerrarPopUp = ()=>{
     for (let botonCerrar of buttonsCerrar){
         botonCerrar.addEventListener("click", ()=>{
-            botonCerrar.closest("dialog").classList.toggle('NoVisible',true);
+            /* botonCerrar.closest("dialog").classList.toggle('NoVisible',true); */ //Otra forma de Cerrar el Pop Up
+            botonCerrar.closest("dialog").style.opacity = "0";
+            botonCerrar.closest("dialog").style.visibility = "hidden";
         });
     };
 };
@@ -64,7 +68,7 @@ buttonAniadirImg.addEventListener("click", (event)=>{
         <button class="button button--ampliar">Ampliar</button>
     </figcaption>
     </figure>`;
-    let newModal = `<dialog class="modal NoVisible">
+    let newModal = `<dialog class="modal" style="opacity: 0; visibility: hidden;">
     <img class="modal__img" src="${newURL}" alt="${newTitulo}">
     <button class="button--close">&times;</button>
 </dialog>`;
