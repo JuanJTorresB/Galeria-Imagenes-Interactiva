@@ -1,7 +1,7 @@
 JavaScript básico – C3
 Ing. Carlos Carrascal
 
-# Título: Galería de Imágenes Interactiva
+# Galería de Imágenes Interactiva
 
 Descripción del Proyecto:
 Desarrolla una aplicación web que permita a los usuarios explorar una galería de imágenes. Los usuarios podrán agregar nuevas imágenes a la galería, eliminar imágenes existentes y visualizar detalles de cada imagen al hacer clic en ella. Además, la aplicación debe incluir animaciones para la carga y eliminación de imágenes, así como para las interacciones del usuario.
