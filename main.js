@@ -1,20 +1,20 @@
-//DOM del los inputs
+//DOM Traer Elementos
 
-const elementoURL = document.getElementById("inUrl") //Input del URL
+const elementoURL = document.getElementById("inUrl"); //Input del URL
 
-const conteinerCarga = document.getElementById("container-carga")
+const conteinerCarga = document.getElementById("container-carga"); //Contenedor de La Animacion de Carga
 
-const elementoTitulo = document.getElementById("inTitulo") //Input del Titulo de la Imagen
+const elementoTitulo = document.getElementById("inTitulo"); //Input del Titulo de la Imagen
 
-const buttonAniadirImg = document.getElementById("aniadirImg") //Boton de Añadir Imagen
+const buttonAniadirImg = document.getElementById("aniadirImg"); //Boton de Añadir Imagen
 
-const buttonsEliminar = document.getElementsByClassName("button--eliminar") //Botones de Eliminar
+const buttonsEliminar = document.getElementsByClassName("button--eliminar"); //Botones de Eliminar
 
-const buttonsAmpliar = document.getElementsByClassName("button--ampliar") //Botones de Ampliar
+const buttonsAmpliar = document.getElementsByClassName("button--ampliar"); //Botones de Ampliar
 
-const buttonsCerrar = document.getElementsByClassName("button--close") //Botones de Cerrar PopUp
+const buttonsCerrar = document.getElementsByClassName("button--close"); //Botones de Cerrar PopUp
 
-const galeria = document.getElementById("main--section") //Galeria para insertar las imagenes
+const galeria = document.getElementById("main--section"); //Galeria para insertar las imagenes
 
 //Funcion que activa los botones de eliminar
 
@@ -26,29 +26,29 @@ const activarBotonesEliminar = ()=>{
                 botonEliminar.parentElement.parentElement.nextElementSibling.remove() //Se elimina el Pop Up // Modal
                 botonEliminar.closest("figure").remove() //Se elimina la Figura Completa
             }, 500);
-        })
-    }
-}       
+        });
+    };
+};    
 
 //Funcion que activa los botones de ampliar
 
 const activarImagenesAmpliar = ()=>{
     for (let botonAmpliar of buttonsAmpliar){
         botonAmpliar.addEventListener("click", ()=>{
-            botonAmpliar.parentElement.parentElement.nextElementSibling.classList.toggle('NoVisible',false)
-        })
-    }
-}
+            botonAmpliar.parentElement.parentElement.nextElementSibling.classList.toggle('NoVisible',false);
+        });
+    };
+};
 
 //Funcion que cierra el PopUp
 
 const activarCerrarPopUp = ()=>{
     for (let botonCerrar of buttonsCerrar){
         botonCerrar.addEventListener("click", ()=>{
-            botonCerrar.closest("dialog").classList.toggle('NoVisible',true)
-        })
-    }
-}
+            botonCerrar.closest("dialog").classList.toggle('NoVisible',true);
+        });
+    };
+};
 
 //Funcion al presionar boton "Añadir Imagen"
 
@@ -67,20 +67,20 @@ buttonAniadirImg.addEventListener("click", (event)=>{
     let newModal = `<dialog class="modal NoVisible">
     <img class="modal__img" src="${newURL}" alt="${newTitulo}">
     <button class="button--close">&times;</button>
-</dialog>`
+</dialog>`;
     galeria.innerHTML += newElement;
     galeria.innerHTML += newModal;
-    activarBotonesEliminar()
-    activarImagenesAmpliar()
-    activarCerrarPopUp()
+    activarBotonesEliminar();
+    activarImagenesAmpliar();
+    activarCerrarPopUp();
     
 })
 
 window.addEventListener("DOMContentLoaded", ()=>{
     conteinerCarga.style.visibility = "hidden";
     conteinerCarga.style.opacity = "0";
-})
+});
 
-activarBotonesEliminar()
-activarImagenesAmpliar()
-activarCerrarPopUp()
+activarBotonesEliminar();
+activarImagenesAmpliar();
+activarCerrarPopUp();
