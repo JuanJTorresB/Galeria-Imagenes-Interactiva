@@ -12,11 +12,11 @@ Requisitos del Proyecto:
 
 Estructura HTML:
 
-Una <div> principal para contener la galería.
-Un campo de entrada <input> para la URL de la imagen y un <input> para el título de la imagen.
-Un botón <button> para añadir la imagen a la galería.
-Un contenedor <div> para mostrar las imágenes en miniatura.
-Cada imagen en la galería debe estar en un elemento <div> con una clase específica y contener una imagen <img>, un título <h3>, un botón para eliminar y un botón para ver detalles.
+Una div principal para contener la galería.
+Un campo de entrada input para la URL de la imagen y un input para el título de la imagen.
+Un botón button para añadir la imagen a la galería.
+Un contenedor div para mostrar las imágenes en miniatura.
+Cada imagen en la galería debe estar en un elemento div con una clase específica y contener una imagen img, un título h3, un botón para eliminar y un botón para ver detalles.
 Estilos CSS:
 
 Estilos básicos para las imágenes en miniatura y el contenedor de la galería.
@@ -26,7 +26,7 @@ Transiciones y animaciones para la aparición, eliminación y ampliación de las
 
 Administración de Nodos:
 
-Implementa una función que, al hacer clic en el botón de añadir imagen, cree un nuevo elemento <div> con una imagen <img>, un título <h3>, y dos botones (uno para eliminar y otro para ver detalles). Añade este nuevo elemento al contenedor de la galería.
+Implementa una función que, al hacer clic en el botón de añadir imagen, cree un nuevo elemento div con una imagen img, un título h3, y dos botones (uno para eliminar y otro para ver detalles). Añade este nuevo elemento al contenedor de la galería.
 Propiedades para Modificación de Elementos:
 
 Implementa funciones que permitan modificar el título y la URL de una imagen existente al hacer clic en el botón correspondiente. Utiliza textContent y src para cambiar el título y la imagen.
