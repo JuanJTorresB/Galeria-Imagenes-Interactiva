@@ -2,6 +2,8 @@
 
 const elementoURL = document.getElementById("inUrl") //Input del URL
 
+const conteinerCarga = document.getElementById("container-carga")
+
 const elementoTitulo = document.getElementById("inTitulo") //Input del Titulo de la Imagen
 
 const buttonAniadirImg = document.getElementById("aniadirImg") //Boton de Añadir Imagen
@@ -74,6 +76,10 @@ buttonAniadirImg.addEventListener("click", (event)=>{
     
 })
 
+window.addEventListener("DOMContentLoaded", ()=>{
+    conteinerCarga.style.visibility = "hidden";
+    conteinerCarga.style.opacity = "0";
+})
 
 activarBotonesEliminar()
 activarImagenesAmpliar()
