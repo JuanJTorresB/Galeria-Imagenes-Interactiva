@@ -14,6 +14,8 @@ const buttonsAmpliar = document.getElementsByClassName("button--ampliar"); //Bot
 
 const buttonsCerrar = document.getElementsByClassName("button--close"); //Botones de Cerrar PopUp
 
+const buttonsMod = document.getElementsByClassName("button--mod"); //Botones de Modificar
+
 const galeria = document.getElementById("main--section"); //Galeria para insertar las imagenes
 
 //Funcion que activa los botones de eliminar
@@ -54,6 +56,29 @@ const activarCerrarPopUp = ()=>{
     };
 };
 
+//Funcion que activa los botones de Modificar
+
+const activarMod = ()=>{
+    for (let botonMod of buttonsMod){
+        botonMod.addEventListener("click", ()=>{
+            let nuevoTitulo = prompt("¿Cual es el Nuevo Titulo?")
+            let nuevoURL = prompt("¿Cual es el Nuevo URL?")
+            const imagen = botonMod.closest("figcaption").previousElementSibling;
+            imagen.src = nuevoURL;
+            imagen.alt = nuevoTitulo;
+            const nuevoH3 = document.createElement('h3');
+            nuevoH3.className = 'fig__info__titulo';
+            nuevoH3.textContent = nuevoTitulo;
+            const figcaption = botonMod.closest("figcaption");
+            figcaption.replaceChild(nuevoH3, figcaption.firstElementChild);
+            const dialog = botonMod.parentElement.parentElement.nextElementSibling
+            const imagenDialog = dialog.querySelector('img.modal__img');
+                imagenDialog.src = nuevoURL;
+                imagenDialog.alt = nuevoTitulo;
+        });
+    };
+};
+
 //Funcion al presionar boton "Añadir Imagen"
 
 buttonAniadirImg.addEventListener("click", (event)=>{
@@ -66,6 +91,7 @@ buttonAniadirImg.addEventListener("click", (event)=>{
         <h3 class="fig__info__titulo">${newTitulo}</h3>
         <button class="button button--eliminar">Eliminar</button>
         <button class="button button--ampliar">Ampliar</button>
+        <button class="button button--mod">Modificar</button>
     </figcaption>
     </figure>`;
     let newModal = `<dialog class="modal" style="opacity: 0; visibility: hidden;">
@@ -77,6 +103,7 @@ buttonAniadirImg.addEventListener("click", (event)=>{
     activarBotonesEliminar();
     activarImagenesAmpliar();
     activarCerrarPopUp();
+    activarMod();
     
 })
 
@@ -88,3 +115,4 @@ window.addEventListener("DOMContentLoaded", ()=>{
 activarBotonesEliminar();
 activarImagenesAmpliar();
 activarCerrarPopUp();
+activarMod();

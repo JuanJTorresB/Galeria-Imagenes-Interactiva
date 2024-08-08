@@ -17,6 +17,7 @@
 }
 .main--section {
     justify-content: space-around;
+    row-gap: 10px;
 }
 .inputForm{
     max-height: 30px;
@@ -24,6 +25,8 @@
 .button{
     padding: 8px;
     border-radius: 8px;
+    font-weight: 800;
+    background-color: #ff6b9d;
 }
 .fig__img {
     width: 100% ;
@@ -91,7 +94,7 @@
     border: 0px;
 }
 
-/* Animacion Carga */
+/* Animación Carga */
 
 #container-carga{
     background-color: rgba(250, 240, 245, 0.9);
